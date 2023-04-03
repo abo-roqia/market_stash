@@ -1,0 +1,522 @@
+[{
+  "_id": {
+    "$oid": "63eea7c855606f07e5dd6d18"
+  },
+  "type": "بكر تواليت",
+  "branches": {
+    "default": [],
+    "فامليا": {
+      "tquantity": 38,
+      "currentCost": 115
+    },
+    "جود كير": {
+      "tquantity": 33,
+      "currentCost": 104
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeab0355606f07e5dd6d45"
+  },
+  "type": "بامبرز بانتس",
+  "branches": {
+    "default": [],
+    "م 4": {
+      "tquantity": 8,
+      "currentCost": 400
+    },
+    "م 5": {
+      "tquantity": 7,
+      "currentCost": 400
+    },
+    "م 6": {
+      "tquantity": 0,
+      "currentCost": 400
+    },
+    "م٤ الجديد": {
+      "tquantity": 8,
+      "currentCost": 620
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeab5255606f07e5dd6d4b"
+  },
+  "type": "بيبي شارك",
+  "branches": {
+    "default": [],
+    "م 2": {
+      "tquantity": 4,
+      "currentCost": 470
+    },
+    "م 3": {
+      "tquantity": 3,
+      "currentCost": 530
+    },
+    "م 5": {
+      "tquantity": 6,
+      "currentCost": 580
+    },
+    "م 1": {
+      "tquantity": 0,
+      "currentCost": "0"
+    },
+    "م 4": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaa3e55606f07e5dd6d35"
+  },
+  "type": "بي بم بانتس",
+  "branches": {
+    "default": [],
+    "م 3": {
+      "tquantity": 3,
+      "currentCost": 570
+    },
+    "م 4": {
+      "tquantity": 2,
+      "currentCost": 570
+    },
+    "م 5": {
+      "tquantity": 0,
+      "currentCost": 655
+    },
+    "م 6": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaba155606f07e5dd6d54"
+  },
+  "type": "مولفكس بانتس",
+  "branches": {
+    "default": [],
+    "م 3": {
+      "tquantity": 2,
+      "currentCost": "625"
+    },
+    "م 4": {
+      "tquantity": 36,
+      "currentCost": 625
+    },
+    "م 5": {
+      "tquantity": 22,
+      "currentCost": "720"
+    },
+    "م 6": {
+      "tquantity": 8,
+      "currentCost": "610"
+    },
+    "م 7": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeab7155606f07e5dd6d4e"
+  },
+  "type": "جود كير",
+  "branches": {
+    "default": [],
+    "م 4": {
+      "tquantity": 12,
+      "currentCost": 545
+    },
+    "م 5": {
+      "tquantity": 17,
+      "currentCost": 605
+    },
+    "م 6": {
+      "tquantity": 1,
+      "currentCost": 650
+    },
+    "م 2": {
+      "tquantity": 0,
+      "currentCost": "0"
+    },
+    "م 3": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eea7f255606f07e5dd6d1b"
+  },
+  "type": "مناديل مبلله",
+  "branches": {
+    "default": [],
+    "120 منديل": {
+      "tquantity": 2,
+      "currentCost": 175
+    },
+    "72 منديل": {
+      "tquantity": 2,
+      "currentCost": 215
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaabf55606f07e5dd6d3e"
+  },
+  "type": "سوفي",
+  "branches": {
+    "default": [],
+    "برايفت تريو": {
+      "tquantity": 37,
+      "currentCost": 195
+    },
+    "طويل": {
+      "tquantity": 25,
+      "currentCost": 355
+    },
+    "مولبد دبل": {
+      "tquantity": 0,
+      "currentCost": 400
+    },
+    "طويل جدا": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaa2455606f07e5dd6d32"
+  },
+  "type": "مناديل جيب",
+  "branches": {
+    "default": [],
+    "فامليا": {
+      "tquantity": 52,
+      "currentCost": 145
+    },
+    "جود كير": {
+      "tquantity": 65,
+      "currentCost": 135
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eea91c55606f07e5dd6d2a"
+  },
+  "type": "اولويز",
+  "branches": {
+    "default": [],
+    "تريو": {
+      "tquantity": 4,
+      "currentCost": 480
+    },
+    "دبل": {
+      "tquantity": 4,
+      "currentCost": 490
+    },
+    "تريو حساس": {
+      "tquantity": 9,
+      "currentCost": 285
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaad655606f07e5dd6d41"
+  },
+  "type": "جود كير ميجا",
+  "branches": {
+    "default": [],
+    "م 4": {
+      "tquantity": 3,
+      "currentCost": 500
+    },
+    "م 5": {
+      "tquantity": 3,
+      "currentCost": 550
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeab8b55606f07e5dd6d51"
+  },
+  "type": "دامبلز",
+  "branches": {
+    "default": [],
+    "م 1": {
+      "tquantity": 2,
+      "currentCost": 465
+    },
+    "م 2": {
+      "tquantity": 1,
+      "currentCost": 470
+    },
+    "م 3": {
+      "tquantity": 2,
+      "currentCost": 530
+    },
+    "م 4": {
+      "tquantity": 38,
+      "currentCost": 535
+    },
+    "م 5": {
+      "tquantity": 32,
+      "currentCost": 575
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaa8955606f07e5dd6d38"
+  },
+  "type": "بيبي جوي",
+  "branches": {
+    "default": [],
+    "م 1": {
+      "tquantity": 16,
+      "currentCost": 475
+    },
+    "م 2": {
+      "tquantity": 14,
+      "currentCost": 505
+    },
+    "م 3": {
+      "tquantity": 6,
+      "currentCost": 600
+    },
+    "م 4": {
+      "tquantity": 27,
+      "currentCost": 600
+    },
+    "م 5": {
+      "tquantity": 24,
+      "currentCost": 700
+    },
+    "قطع م 2": {
+      "tquantity": 4,
+      "currentCost": 150
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeabbe55606f07e5dd6d57"
+  },
+  "type": "مولفكس",
+  "branches": {
+    "default": [],
+    "م 1": {
+      "tquantity": 13,
+      "currentCost": 460
+    },
+    "م 2": {
+      "tquantity": 6,
+      "currentCost": 470
+    },
+    "م 3": {
+      "tquantity": 1,
+      "currentCost": "625"
+    },
+    "م 5": {
+      "tquantity": 3,
+      "currentCost": "720"
+    },
+    "م 4": {
+      "tquantity": 3,
+      "currentCost": 625
+    },
+    "م 6": {
+      "tquantity": 0,
+      "currentCost": "0"
+    },
+    "م 7": {
+      "tquantity": 0,
+      "currentCost": 0
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eea76c9e81c1b724c4f621"
+  },
+  "type": "بامبرز",
+  "branches": {
+    "default": [],
+    "م 4": {
+      "tquantity": 0,
+      "currentCost": 250
+    },
+    "م 5": {
+      "tquantity": 0,
+      "currentCost": 250
+    },
+    "م 1": {
+      "tquantity": 2,
+      "currentCost": 550
+    },
+    "م 3": {
+      "tquantity": 0,
+      "currentCost": "300"
+    },
+    "م 2": {
+      "tquantity": 6,
+      "currentCost": 550
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeab3655606f07e5dd6d48"
+  },
+  "type": "مناديل سحب",
+  "branches": {
+    "default": [],
+    "زينه": {
+      "tquantity": 55,
+      "currentCost": "320"
+    },
+    "فامليا": {
+      "tquantity": 40,
+      "currentCost": "320"
+    },
+    "بابيا": {
+      "tquantity": 8,
+      "currentCost": "335"
+    },
+    "لمسات": {
+      "tquantity": 35,
+      "currentCost": 250
+    },
+    "مولي": {
+      "tquantity": 5,
+      "currentCost": 250
+    },
+    "لانا": {
+      "tquantity": 130,
+      "currentCost": 203
+    },
+    "مندالا": {
+      "tquantity": 20,
+      "currentCost": 250
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eeaa9c55606f07e5dd6d3b"
+  },
+  "type": "فاين بيبي",
+  "branches": {
+    "default": [],
+    "م 3": {
+      "tquantity": 3,
+      "currentCost": 600
+    },
+    "م 4": {
+      "tquantity": 41,
+      "currentCost": 600
+    },
+    "م 5": {
+      "tquantity": 21,
+      "currentCost": 700
+    },
+    "م 1": {
+      "tquantity": 0,
+      "currentCost": "0"
+    },
+    "م 2": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eea87755606f07e5dd6d20"
+  },
+  "type": "كبار سن",
+  "branches": {
+    "default": [],
+    "فاين بيزك 36 ح": {
+      "tquantity": 2,
+      "currentCost": 850
+    },
+    "فاين كير 36 ح": {
+      "tquantity": 1,
+      "currentCost": 1100
+    },
+    "جيرمني 18 ح": {
+      "tquantity": 0,
+      "currentCost": "0"
+    },
+    "جيرميني 36 ح": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63eea95e55606f07e5dd6d2d"
+  },
+  "type": "بوني",
+  "branches": {
+    "default": [],
+    "م 2": {
+      "tquantity": 4,
+      "currentCost": "520"
+    },
+    "م 4": {
+      "tquantity": 1,
+      "currentCost": 645
+    },
+    "م 5": {
+      "tquantity": 0,
+      "currentCost": 680
+    },
+    "م 1": {
+      "tquantity": 0,
+      "currentCost": 300
+    },
+    "م 3": {
+      "tquantity": 0,
+      "currentCost": "0"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63feffe8cf57f8e5997dc094"
+  },
+  "type": "بكر مطبخ",
+  "branches": {
+    "default": []
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff1cabd347604d30c799cb"
+  },
+  "type": "ايزي باك",
+  "branches": {
+    "default": [],
+    "هاندي": {
+      "tquantity": 0,
+      "currentCost": 250
+    }
+  },
+  "__v": 0
+}]
