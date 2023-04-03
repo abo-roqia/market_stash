@@ -1,0 +1,26 @@
+$fonts-style: (
+	Cursive-font: (
+		font: "cursive",
+	),
+	Poppins-font: (
+		font: "Poppins",
+	),
+	Caveat-font: (
+		font: "Caveat",
+	),
+	Cinzel-font: (
+		font: "Cinzel",
+	),
+	Dancing-font: (
+		font: "Dancing",
+	),
+	Montserrat-font: (
+		font: "Montserrat",
+	),
+);
+
+@each $font, $val in $fonts-style {
+	body[data-font="#{$font}"] {
+		font-family: map-get($val, font);
+	}
+}

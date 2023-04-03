@@ -1,0 +1,62 @@
+@use "./variables" as *;
+$themes: light-red-theme, light-blue-theme, light-purple-theme, light-yellow-theme, light-green-theme, light-red-blue-theme,
+	light-silver-theme, light-darkBlue-theme, nightMode-theme;
+
+@each $theme in $themes {
+	body[data-theme="#{$theme}"] {
+		@if $theme == "light-red-theme" {
+			--main-color: #dc143c;
+			--second-color: #e91e63;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-blue-theme" {
+			--main-color: #00a8ff;
+			--second-color: #0097e6;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-red-blue-theme" {
+			--main-color: #00a8ff;
+			--second-color: #e84118;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-purple-theme" {
+			--main-color: #9c88ff;
+			--second-color: #8c7ae6;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-yellow-theme" {
+			--main-color: rgba(255, 187, 1, 0.823);
+			--second-color: #e1b12c;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-green-theme" {
+			--main-color: #4cd137;
+			--second-color: #44bd32;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-silver-theme" {
+			--main-color: #7f8fa6;
+			--second-color: #718093;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "light-darkBlue-theme" {
+			--main-color: #273c75;
+			--second-color: #192a56;
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "nightMode-theme" {
+			--white: #222;
+			--black: #fff;
+			--light-text: #999;
+			--dark-text: #ddd;
+			--light-bg: #111;
+			--dark-bg: #999;
+			.swiper-pagination-bullet {
+				background: get(dark-bg);
+			}
+			.swiper-pagination-bullet-active {
+				background: get(second-color);
+			}
+		}
+	}
+}

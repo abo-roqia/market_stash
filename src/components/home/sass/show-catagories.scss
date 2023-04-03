@@ -1,0 +1,65 @@
+@use "assets/scss/mixins" as *;
+
+.catagory-list {
+	@include flex(space-between, center);
+	flex-wrap: wrap;
+	.product {
+		background-color: get(black);
+		width: calc((100% / 2) - 20px);
+		max-width: 250px;
+		margin: 10px 0;
+		overflow: hidden;
+		position: relative;
+		border-radius: 20px 20px 0 0;
+		&::before {
+			@include absolute(tl, 0, 0);
+			content: "";
+			background-color: rgba(black, 0.8);
+			width: 100%;
+			height: 0;
+			z-index: 1;
+			transition: 0.4s ease-in-out;
+		}
+		&:hover::before {
+			height: 184px;
+		}
+		.product-img {
+			background-color: get(dark-bg);
+			width: 100%;
+			height: 150px;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.product-title {
+			font-size: 24px;
+			text-align: center;
+		}
+		.product-kinds {
+			@include absolute(tl, 0, 0);
+			@include flex(center, center);
+			width: 100%;
+			height: 0;
+			opacity: 0;
+			z-index: 2;
+			overflow-y: hidden;
+			flex-direction: column;
+			.kind {
+				background-color: #9e0020;
+				width: 80%;
+				height: 60%;
+				padding-block: 5px;
+				text-align: center;
+				font-size: 22px;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+		}
+		&:hover .product-kinds {
+			height: 100%;
+			opacity: 1;
+			overflow-y: auto;
+		}
+	}
+}

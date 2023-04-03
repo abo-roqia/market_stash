@@ -1,0 +1,24 @@
+@use "assets/scss/mixins" as *;
+
+.products-catagory {
+	width: 100vw;
+	min-height: 100vh;
+	padding: 70px 15px 15px;
+	.close-icon {
+		@include absolute(tr, 15px, 15px);
+		z-index: 5;
+	}
+	input::placeholder {
+		color: get(black);
+		font-weight: bold;
+	}
+	.functionality {
+		@include flex(space-between, center);
+		flex-wrap: wrap;
+		z-index: 100;
+		position: relative;
+		.products-table-btn {
+			border-radius: 15px;
+		}
+	}
+}

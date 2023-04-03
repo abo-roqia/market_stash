@@ -1,0 +1,12 @@
+@use "assets/scss/mixins" as *;
+
+.page-not-found {
+	@include fixed(tl, 0, 0);
+	@include flex(center, center);
+	background-color: white;
+	width: 100vw;
+	height: 100vh;
+	._404 {
+		width: 100%;
+	}
+}

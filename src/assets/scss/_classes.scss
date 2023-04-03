@@ -1,0 +1,292 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./global" as *;
+
+.gradient-text {
+	background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 153, 0));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.text-green {
+	color: green;
+}
+.text-crimson {
+	color: crimson;
+}
+.text-gold {
+	color: gold;
+}
+
+// Show & Hide Elements
+.hide-height {
+	max-height: 0 !important;
+}
+
+.show-display {
+	display: initial !important;
+}
+
+.hide-display {
+	display: none !important;
+}
+
+.show-scale {
+	transform: scale(1) !important;
+}
+
+.hide-scale {
+	transform: scale(0) !important;
+	height: 0 !important;
+	overflow: hidden;
+}
+
+.main-color {
+	color: get(main-color);
+}
+
+// Pre-loader
+.pre-loader {
+	@include flex(center, center);
+	@include fixed(tl, 0, 0);
+	background: get(black);
+	width: 100%;
+	height: 100%;
+	z-index: 1000000;
+	img {
+		width: 50vmin;
+	}
+}
+
+// Basic Classes
+.mybtn {
+	background: transparent;
+	color: get(white);
+	width: fit-content;
+	font-size: 1.8rem;
+	font-weight: bold;
+	padding: 10px 30px;
+	margin: 15px 0;
+	display: block;
+	cursor: pointer;
+	border: 2px solid get(main-color);
+	border-radius: 30px;
+	transition: all 0.4s ease-in-out !important;
+	&:hover,
+	&:focus {
+		background: get(main-color);
+		color: get(white);
+		border-color: get(main-color) !important;
+	}
+	@include width(md) {
+		padding: 10px 20px;
+		margin: 10px 0;
+	}
+	@include width(sm) {
+		padding: 10px 15px;
+		margin: 5px 0;
+	}
+}
+
+.light-title {
+	color: get(white);
+	text-align: center;
+	margin-bottom: 25px;
+	h1 {
+		font-size: 4rem;
+		@include width(md) {
+			font-size: 3rem;
+		}
+		@include width(sm) {
+			font-size: 2.5rem;
+		}
+	}
+	span {
+		font-size: 2rem;
+		position: relative;
+		@include width(sm) {
+			font-size: 1rem;
+		}
+		&::before,
+		&::after {
+			@include absolute(tl, 50%, -60px);
+			background: get(white);
+			content: "";
+			width: 50px;
+			height: 3px;
+			@include width(sm) {
+				width: 35px;
+				height: 1.5px;
+				left: -45px;
+			}
+		}
+		&::after {
+			left: initial;
+			right: -60px;
+			@include width(sm) {
+				right: -45px;
+			}
+		}
+	}
+}
+
+.dark-title {
+	@extend .light-title;
+	color: get(dark-text);
+	span {
+		&::before,
+		&::after {
+			background: get(dark-text) !important;
+		}
+	}
+}
+
+// Swiper Library
+.swiper-pagination {
+	bottom: -5px !important;
+	.swiper-pagination-bullet-active {
+		background: get(main-color) !important;
+		width: 20px;
+		border-radius: 4px;
+	}
+	.swiper-pagination-bullet {
+		background: get(white);
+	}
+}
+
+.swiper-button-prev {
+	background-color: get(dark-bg);
+	color: get(light-text) !important;
+	width: 40px !important;
+	border-radius: 100%;
+	@include width(sm) {
+		display: none !important;
+	}
+	&:hover {
+		box-shadow: 0 0 10px get(white);
+	}
+	&::after {
+		font-size: 22px !important;
+		font-weight: bold !important;
+	}
+}
+
+.swiper-button-next {
+	@extend .swiper-button-prev;
+}
+
+$clipPath: (
+	top: (
+		show: (
+			50% 0%,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 0,
+		),
+		hide: (
+			50% 0%,
+			100% 0,
+			100% 0,
+			0 0,
+			0 0,
+		),
+	),
+	right: (
+		show: (
+			50% 0%,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 0,
+		),
+		hide: (
+			50% 0%,
+			100% 0,
+			100% 100%,
+			100% 100%,
+			100% 0,
+		),
+	),
+	bottom: (
+		show: (
+			50% 0%,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 0,
+		),
+		hide: (
+			50% 100%,
+			100% 100%,
+			100% 100%,
+			0 100%,
+			0 100%,
+		),
+	),
+	left: (
+		show: (
+			50% 0%,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 0,
+		),
+		hide: (
+			0 0,
+			0 50%,
+			0 100%,
+			0 100%,
+			0 0,
+		),
+	),
+);
+
+@each $dir, $value in $clipPath {
+	.show-#{$dir}-clip {
+		clip-path: polygon(map-get($value, show)) !important;
+	}
+
+	.hide-#{$dir}-clip {
+		width: 0 !important;
+		background-color: transparent !important;
+		clip-path: polygon(map-get($value, hide)) !important;
+		opacity: 0;
+	}
+}
+
+$opacities: (
+	opacity-0: 0,
+	opacity-10: 0.1,
+	opacity-20: 0.2,
+	opacity-30: 0.3,
+	opacity-40: 0.4,
+	opacity-50: 0.5,
+	opacity-60: 0.6,
+	opacity-70: 0.7,
+	opacity-80: 0.8,
+	opacity-90: 0.9,
+	opacity-100: 1,
+);
+
+@each $opacity, $value in $opacities {
+	.#{$opacity} {
+		opacity: $value !important;
+	}
+}
+
+$fonts: (
+	f-10: 10,
+	f-15: 15,
+	f-20: 20,
+	f-25: 25,
+	f-30: 30,
+	f-35: 35,
+	f-40: 40,
+);
+
+@each $font, $value in $fonts {
+	.#{$font} {
+		font-size: #{$value}px !important;
+	}
+}

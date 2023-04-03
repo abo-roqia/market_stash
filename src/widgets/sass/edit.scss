@@ -1,0 +1,90 @@
+@use "assets/scss/mixins" as *;
+
+.edit-page {
+	@include linear-background("assets/images/edit-bg.png", 100% 100%, initial, (rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)));
+	@include absolute(tl, 0, 0);
+	background-color: get(black);
+	width: 100vw;
+	height: 100vh;
+	padding: 10px;
+	z-index: 1;
+	border-radius: 10px;
+	.widget {
+		@include fixed(tl, 50%, 50%);
+		@include flex(center, center);
+		@include translate;
+		background-color: get(black);
+		width: 80%;
+		height: 70vh;
+		padding: 20px;
+		z-index: 1000;
+		flex-direction: column;
+		box-shadow: get(box-shadow);
+		.mybtn {
+			width: 100%;
+			display: initial;
+			font-size: 20px;
+			margin: 15px 0;
+		}
+		.close-icon {
+			@include absolute(tr, 30px, 20px);
+			font-size: 20px;
+			z-index: 5;
+		}
+		input {
+			width: 100%;
+			padding: 5px 20px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 10px;
+			border: 3px solid get(light-text);
+			&:focus {
+				border: 3px solid get(main-color);
+			}
+			&::placeholder {
+				color: get(black);
+				font-weight: bold;
+			}
+		}
+	}
+	.product-title {
+		padding-bottom: 20px;
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+	table {
+		background-color: get(black);
+		padding: 10px 0;
+		border-radius: 10px;
+		box-shadow: get(box-shadow);
+		tr {
+			&.empty {
+				color: get(light-text);
+				.fa-trash-alt {
+					opacity: 0.5;
+					pointer-events: none;
+				}
+			}
+			&.head {
+				color: get(main-color);
+				font-weight: bold;
+				font-size: 20px;
+				box-shadow: 0 2px 2px get(main-color);
+			}
+			.column {
+				width: calc(100% / 4);
+				height: 60px;
+				font-size: 16px;
+				text-align: center;
+				padding: 5px;
+				&:first-child {
+					@include flex(space-evenly, center);
+					white-space: nowrap;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
