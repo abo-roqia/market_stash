@@ -1,0 +1,51 @@
+@use "assets/scss/mixins" as *;
+
+.navbar {
+	@include fixed(tl, 0, 0);
+	@include flex(space-between, center);
+	background: get(dark-bg);
+	width: 100%;
+	padding: 10px 20px;
+	z-index: 100;
+	box-shadow: get(box-shadow);
+	.nav-togglers {
+		z-index: 1000;
+		border-radius: 50%;
+		.icon {
+			color: get(white);
+			font-size: 20px;
+			padding-right: 15px;
+		}
+		.dropdown-container {
+			@include fixed(tl, 0, 0);
+			width: 100vw;
+			height: 100vh;
+			.dropdown {
+				@include absolute(tl, 47px, 0);
+				background: get(dark-bg);
+				height: 145px;
+				overflow: hidden;
+				box-shadow: 10px 10px 10px get(black);
+				.item {
+					@include flex(flex-start, center);
+					padding: 10px;
+					h3 {
+						font-size: 18px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.logo {
+		@include flex(space-between, center);
+		gap: 10px;
+		img {
+			width: 20px;
+			height: 20px;
+		}
+		h1 {
+			font-size: 18px;
+		}
+	}
+}

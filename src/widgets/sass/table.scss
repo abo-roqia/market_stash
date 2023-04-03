@@ -1,0 +1,32 @@
+@use "assets/scss/mixins" as *;
+
+.table-page {
+	@include absolute(tl, 0, 0);
+	background: get(black);
+	width: 100vw;
+	padding: 10px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: inset 0 0 20px get(main-color);
+	.col {
+		color: get(white);
+		width: calc(100% / 6);
+		height: 35px;
+		font-size: 13px;
+		text-align: center;
+	}
+	.table-title {
+		width: 100%;
+		padding-bottom: 15px;
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.head-row {
+		background: linear-gradient(rgba(178, 91, 18, 1), rgba(0, 0, 0));
+		td {
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+}

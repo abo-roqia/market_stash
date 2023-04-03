@@ -1,0 +1,75 @@
+@use "assets/scss/mixins" as *;
+
+.catagory {
+	@include fixed(tl, 50%, 50%);
+	@include flex(center, center);
+	@include translate;
+	background-color: get(black);
+	width: 80%;
+	height: 70vh;
+	padding: 20px;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	overflow: auto;
+	z-index: 105;
+	box-shadow: get(box-shadow);
+	.product-title {
+		font-size: 25px;
+		font-weight: bold;
+	}
+	.toggle-btns {
+		@include flex(center, center);
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 20px;
+		margin-top: 20px;
+		.mybtn {
+			width: calc(50% - 20px);
+			white-space: nowrap;
+			&.active {
+				background: get(main-color);
+				border-color: get(light-text);
+			}
+		}
+	}
+	.brand-img {
+		input[type="file"] {
+			width: 100%;
+		}
+		img {
+			width: 120px;
+			height: 120px;
+			margin: auto auto 15px;
+			display: block;
+			border-radius: 40%;
+		}
+	}
+	.kind-row {
+		@include flex(space-between, center);
+		.btn {
+			background-color: get(main-color);
+			color: get(light-text);
+			width: fit-content;
+			font-size: 20px;
+			padding: 2px 7px;
+			margin-bottom: 24px;
+			border-radius: 5px;
+		}
+	}
+	input {
+		width: 100%;
+		padding: 5px 20px;
+		margin-bottom: 20px;
+		font-size: 14px;
+		font-weight: bold;
+		border-radius: 10px;
+		border: 3px solid get(light-text);
+		&:focus {
+			border: 3px solid get(main-color);
+		}
+	}
+	.mybtn {
+		width: 100%;
+		text-align: center;
+	}
+}

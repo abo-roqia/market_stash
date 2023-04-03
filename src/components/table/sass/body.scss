@@ -1,0 +1,23 @@
+@use "assets/scss/mixins" as *;
+
+.table-body {
+	.row {
+		color: white;
+		.col.product-name,
+		.col.product-cost {
+			color: get(white) !important;
+			font-size: 18px;
+			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+			font-weight: bold;
+			&.gray {
+				color: get(light-text) !important;
+			}
+		}
+		&.all-empty .col {
+			color: get(light-text);
+		}
+		&.nearly-empty .col {
+			color: gold;
+		}
+	}
+}
