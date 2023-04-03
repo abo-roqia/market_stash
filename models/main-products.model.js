@@ -5,4 +5,4 @@ const schema = new mongoose.Schema({
 	branches: { type: Object, default: { default: [] } },
 });
 
-export default mongoose.model("products", schema);
+export default mongoose.model("main-products", schema);

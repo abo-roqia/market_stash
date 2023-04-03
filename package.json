@@ -1,6 +1,5 @@
 {
 	"name": "market-stash",
-	"version": "1.0.0",
 	"description": "abo roqia market",
 	"main": "server.js",
 	"type": "module",

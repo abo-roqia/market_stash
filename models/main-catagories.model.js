@@ -6,4 +6,4 @@ let schema = new mongoose.Schema({
 	img: { type: String },
 });
 
-export default mongoose.model("catagories", schema);
+export default mongoose.model("main-catagories", schema);

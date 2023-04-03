@@ -6,8 +6,10 @@ import cors from "cors";
 import bodyParser from "body-parser";
 
 // Routes
-import catagoriesRouter from "./routes/catagories.routes.js";
-import productsRouter from "./routes/products.routes.js";
+import mainCatagories from "./routes/main-catagories.routes.js";
+import mainProducts from "./routes/main-products.routes.js";
+import subCatagories from "./routes/sub-catagories.routes.js";
+import subProducts from "./routes/sub-products.routes.js";
 
 let app = express();
 dotenv.config();
@@ -17,10 +19,12 @@ app.use(bodyParser.urlencoded({ extended: true, limit: "500mb", parameterLimit: 
 app.use(bodyParser.json({ extended: true, limit: "500mb", parameterLimit: 500000 }));
 app.use(express.json());
 
-app.use("/api/main/catagories", catagoriesRouter);
-app.use("/api/main/products", productsRouter);
-app.use("/api/sub/catagories", catagoriesRouter);
-app.use("/api/sub/products", productsRouter);
+app.use("/api/main/catagories", mainCatagories);
+app.use("/api/main/products", mainProducts);
+
+app.use("/api/sub/catagories", subCatagories);
+app.use("/api/sub/products", subProducts);
+
 app.use("/", (req, res) => res.send(`Enjoy, Server Is Running.`));
 
 const PORT = process.env.PORT || 3000;
