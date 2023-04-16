@@ -1,5 +1,5 @@
 import express from "express";
-import { GET_CATAGORIES, ADD_CATAGORY, UPDATE_CATAGORY, DELETE_CATAGORY } from "../controllers/sub-catagories.controllers.js";
+import { GET_CATAGORIES, ADD_CATAGORY, UPDATE_CATAGORY, DELETE_CATAGORY } from "../controllers/sub-catagories.controller.js";
 
 const router = express.Router();
 
