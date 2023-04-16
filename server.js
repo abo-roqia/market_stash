@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import bodyParser from "body-parser";
+import compression from "compression";
 
 // Routes
 import mainCatagories from "./routes/main-catagories.routes.js";
@@ -15,10 +16,16 @@ import test from "./routes/test.js";
 let app = express();
 dotenv.config();
 app.use(cors());
+app.use(
+	compression({
+		level: 6,
+		threshold: 10 * 1000,
+		filter: (req, res) => (req.header["x-no-compression"] ? false : compression.filter(req, res)),
+	})
+);
 
-app.use(bodyParser.urlencoded({ extended: true, limit: "500mb", parameterLimit: 500000 }));
-app.use(bodyParser.json({ extended: true, limit: "500mb", parameterLimit: 500000 }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true, limit: "500mb", parameterLimit: 9 * 1000 * 1000 * 1000 * 1000 }));
+app.use(bodyParser.json({ extended: true, limit: "500mb", parameterLimit: 9 * 1000 * 1000 * 1000 * 1000 }));
 
 app.use("/api/main/catagories", mainCatagories);
 app.use("/api/main/products", mainProducts);
