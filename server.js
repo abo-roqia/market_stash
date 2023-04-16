@@ -11,7 +11,6 @@ import mainCatagories from "./routes/main-catagories.routes.js";
 import mainProducts from "./routes/main-products.routes.js";
 import subCatagories from "./routes/sub-catagories.routes.js";
 import subProducts from "./routes/sub-products.routes.js";
-import test from "./routes/test.js";
 
 let app = express();
 dotenv.config();
@@ -19,7 +18,7 @@ app.use(cors());
 app.use(
 	compression({
 		level: 9,
-		threshold: 100 * 1000,
+		threshold: 10 * 1000,
 		filter: (req, res) => (req.header["x-no-compression"] ? false : compression.filter(req, res)),
 	})
 );
@@ -32,7 +31,6 @@ app.use("/api/main/products", mainProducts);
 
 app.use("/api/sub/catagories", subCatagories);
 app.use("/api/sub/products", subProducts);
-app.use("/api/test", test);
 
 app.use("/", (req, res) => res.send(`Enjoy, Server Is Running.`));
 
@@ -51,3 +49,5 @@ mongoose.connection.on("connected", () => console.log(`SERVER IS CONNECTED ON [h
 mongoose.connection.on("disconnected", () => console.log("SERVER IS DISCONNECTED."));
 
 app.listen(PORT, DBconnection);
+
+// https://market-users.onrender.com/
