@@ -18,8 +18,8 @@ dotenv.config();
 app.use(cors());
 app.use(
 	compression({
-		level: 6,
-		threshold: 10 * 1000,
+		level: 9,
+		threshold: 100 * 1000,
 		filter: (req, res) => (req.header["x-no-compression"] ? false : compression.filter(req, res)),
 	})
 );
