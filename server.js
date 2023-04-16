@@ -49,5 +49,3 @@ mongoose.connection.on("connected", () => console.log(`SERVER IS CONNECTED ON [h
 mongoose.connection.on("disconnected", () => console.log("SERVER IS DISCONNECTED."));
 
 app.listen(PORT, DBconnection);
-
-// https://market-users.onrender.com/
